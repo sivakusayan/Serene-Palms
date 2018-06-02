@@ -71,7 +71,6 @@ function closeMenu () {
     menuDOM.classList.remove('open');
     menuDOM.classList.add('withdrawn');
     overlay.classList.remove('shadow');
-    overlay.style.zIndex = '-100';
     
     setTimeout(function() {
         document.querySelector('.btn-menu').classList.toggle('show');
@@ -79,7 +78,8 @@ function closeMenu () {
     }, 300);
     
     setTimeout(function() {
-        menuDOM.classList.remove('navslide');   
+        menuDOM.classList.remove('navslide');  
+        overlay.style.zIndex = '-100';
     }, 500);
     
 }
